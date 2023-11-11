@@ -62,7 +62,6 @@ public class StudentService {
                 Element studentElement = (Element) node;
                 String studentGPA = studentElement.getElementsByTagName("GPA").item(0).getTextContent();
                 if (studentGPA.equals(gpa)) {
-                    System.out.println("Search result by GPA:");
                     res.add(fillStudentInfo(studentElement));
                 }
             }

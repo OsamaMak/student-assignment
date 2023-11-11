@@ -29,6 +29,7 @@ function takeStudentData() {
 
             <label for="address">Address:</label>
             <input type="text" id="address" name="address" required>
+            
         `;
 
         form.appendChild(div);
@@ -51,7 +52,7 @@ function storeData() {
         }
 
     }
-    fetch('/storeData', {
+    fetch('/addstudents', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -65,7 +66,7 @@ function storeData() {
             return response.json();
         })
         .then(data => {
-            alert('Student Data stored successfully:', data);
+            alert('Data stored successfully:', data);
             // Optionally, you can update the UI or perform other actions on success
         })
         .catch(error => {
