@@ -43,14 +43,14 @@ public class StudentService {
             return searchByFirstName(document, keyword);
     }
 
-    public String delete(String studentId) {
+    public void delete(String studentId) {
         Document document = null;
         try {
             document = loadOrCreateXMLFile();
         } catch (ParserConfigurationException e) {
             e.printStackTrace();
         }
-        return deleteById(document, studentId);
+        deleteById(document, studentId);
     }
 
     private List<Map<String, String>> searchByGPA(Document document, String gpa) {
@@ -70,7 +70,7 @@ public class StudentService {
         return res;
     }
 
-    private String deleteById(Document document, String id) {
+    private void deleteById(Document document, String id) {
         NodeList nodeList = document.getElementsByTagName("Student");
         for (int i = 0; i < nodeList.getLength(); i++) {
             Node node = nodeList.item(i);
@@ -84,12 +84,9 @@ public class StudentService {
                     } catch (Exception e) {
                         throw new RuntimeException(e);
                     }
-                    return "node deleted successfully";
-
                 }
             }
         }
-        return "Student not found";
     }
 
     private List<Map<String, String>> searchByFirstName(Document document, String firstName) {
@@ -108,18 +105,6 @@ public class StudentService {
         }
         return res;
     }
-//
-//    private  void deleteRecord(Document document, int recordToDelete) {
-//        NodeList nodeList = document.getElementsByTagName("Student");
-//        if (recordToDelete >= 1 && recordToDelete <= nodeList.getLength()) {
-//            Node nodeToRemove = nodeList.item(recordToDelete - 1);
-//            nodeToRemove.getParentNode().removeChild(nodeToRemove);
-//            System.out.println("Record deleted successfully.");
-//        } else {
-//            System.out.println("Invalid record number.");
-//        }
-//    }
-
     private void saveXMLDocument(Document document) throws Exception {
         TransformerFactory transformerFactory = TransformerFactory.newInstance();
         Transformer transformer = transformerFactory.newTransformer();
