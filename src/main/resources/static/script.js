@@ -65,7 +65,7 @@ function storeData() {
             return response.json();
         })
         .then(data => {
-            alert('Data stored successfully:', data);
+            alert('Student Data stored successfully:', data);
             // Optionally, you can update the UI or perform other actions on success
         })
         .catch(error => {
