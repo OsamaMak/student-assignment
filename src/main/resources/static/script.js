@@ -69,7 +69,7 @@ function storeData() {
             // Optionally, you can update the UI or perform other actions on success
         })
         .catch(error => {
-            alert('Error storing data:', error);
+            alert('Error storing Student data:', error);
             // Handle errors, update the UI, or perform other actions on failure
         });
 
