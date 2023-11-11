@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Student Information System</title>
+</head>
+<body>
+<div class="container">
+    <h1>Student Information System</h1>
+    <form id="studentForm">
+        <label for="numStudents">Enter the number of students:</label>
+        <input type="number" id="numStudents" name="numStudents" required>
+        <button type="button" onclick="takeStudentData()">Submit</button>
+    </form>
+    <div id="studentDataContainer"></div>
+    <br/>
+    <br/>
+    <br/>
+    <div id="searchContainer">
+        <label for="searchInput">Search by GPA or FirstName:</label>
+        <input type="text" id="searchInput" name="searchInput" required>
+        <select id="searchBy" name="searchBy">
+            <option value="GPA">GPA</option>
+            <option value="FirstName">First Name</option>
+        </select>
+        <br/>
+        <br/>
+        <button type="button" onclick="search()">Search</button>
+    </div>
+    <div id="searchResultsContainer"></div>
+    <br/>
+    <br/>
+    <br/>
+    <div id="deleteContainer">
+        <label for="deleteInput">Enter Student ID for Deletion:</label>
+        <input type="number" id="deleteInput" name="deleteInput" required>
+        <button type="button" onclick="deleteStudent()">Delete Student</button>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

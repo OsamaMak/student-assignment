@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><University>
+    
+    
+    <Student ID="3">
+        <FirstName>JAck</FirstName>
+        <LastName>JACK</LastName>
+        <Gender>M</Gender>
+        <GPA>4</GPA>
+        <Level>4</Level>
+        <Address>London</Address>
+    </Student>
+    <Student ID="4">
+        <FirstName>Yomna</FirstName>
+        <LastName>Mohamed</LastName>
+        <Gender>F</Gender>
+        <GPA>4.5</GPA>
+        <Level>4</Level>
+        <Address>cairo</Address>
+    </Student>
+    
+    <Student ID="6">
+        <FirstName>Khadija</FirstName>
+        <LastName>Nasr</LastName>
+        <Gender>F</Gender>
+        <GPA>4.5</GPA>
+        <Level>4</Level>
+        <Address>cairo</Address>
+    </Student>
+<Student ID="1"><FirstName>Osama</FirstName><LastName>Makram</LastName><Gender>M</Gender><GPA>4</GPA><Level>4</Level><Address>cairo</Address></Student><Student ID="2"><FirstName>Ahmed</FirstName><LastName>Mahmoud</LastName><Gender>M</Gender><GPA>4</GPA><Level>4</Level><Address>cairo</Address></Student><Student ID="3"><FirstName>Mohamed</FirstName><LastName>Mahmoud</LastName><Gender>F</Gender><GPA>3</GPA><Level>3</Level><Address>cairo</Address></Student></University>
